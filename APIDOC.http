@@ -1,0 +1,177 @@
+#authentication end points
+
+#api call for creating user account
+###
+POST http://127.0.0.1:8000/v1/spending/register/
+Content-Type: application/json
+
+{
+    "username": "react",
+    "email": "react@gmail.com",
+    "password": "123456"
+}
+
+#api call for token generation
+
+###
+POST http://127.0.0.1:8000/v1/spending/token/
+Content-Type: application/json
+
+{
+    "username": "react",
+    "password": "123456"
+}
+
+#api call for get current user details
+###
+GET http://127.0.0.1:8000/v1/spending/me/
+Accept: application/json
+#Authorization: Basic thushara:123456
+Authorization: Token a27a253ea32ef774e162740e621d336dfa860565
+
+
+#=========================expense endpoint 
+#api call for listing all expenese
+###
+GET http://127.0.0.1:8000/v1/spending/expenses/
+Accept: application/json
+Authorization: Token a27a253ea32ef774e162740e621d336dfa860565
+#authentication end points
+
+#api call for creating user account
+###
+POST http://127.0.0.1:8000/v1/spending/register/
+Content-Type: application/json
+
+{
+    "username": "python",
+    "email": "python@gmail.com",
+    "password": "56789"
+}
+
+#api call for token generation
+
+###
+POST http://127.0.0.1:8000/v1/spending/token/
+Content-Type: application/json
+
+{
+    "username": "react",
+    "password": "123456"
+}
+
+#api call for get current user details
+###
+GET http://127.0.0.1:8000/v1/spending/me/
+Accept: application/json
+#Authorization: Basic thushara:123456
+Authorization: Token a27a253ea32ef774e162740e621d336dfa860565
+
+
+#=========================expense endpoint 
+#api call for listing all expenese
+###
+GET http://127.0.0.1:8000/v1/spending/expenses/
+Accept: application/json
+Authorization: Token a27a253ea32ef774e162740e621d336dfa860565
+
+#api call for adding Expense
+###
+POST http://127.0.0.1:8000/v1/spending/expenses/
+Content-Type: application/json
+Authorization: Token a27a253ea32ef774e162740e621d336dfa860565
+
+{
+    "title" : "Sctoor oil change",
+    "amount" : 200,
+    "category" : "BILLS",
+    "payment_method" : "upi"
+}
+
+#api call for fetching details
+###
+GET http://127.0.0.1:8000/v1/spending/expenses/8/
+Accept: application/json
+Authorization: Token a27a253ea32ef774e162740e621d336dfa860565
+
+#api call for update
+###
+PUT http://127.0.0.1:8000/v1/spending/expenses/8/
+Content-Type: application/json
+Authorization: Token a27a253ea32ef774e162740e621d336dfa860565
+
+{
+    "id": 8,
+    "title": "hospital",
+    "amount": "45000.00",
+    "category": "HEALTH",
+    "priority": "need",
+    "payment_method": "upi",
+    "created_at": "2026-10-10T15:04:02.355605Z",
+    "updated_at": "2026-10-10T15:04:02.355635Z",
+    "owner": 1
+  }
+
+#api call for delete expense
+###
+DELETE http://127.0.0.1:8000/v1/spending/expenses/5/
+Accept: application/json
+Authorization: Token a27a253ea32ef774e162740e621d336dfa860565
+
+#api call for adding Expense
+###
+POST http://127.0.0.1:8000/v1/spending/expenses/
+Content-Type: application/json
+Authorization: Token a27a253ea32ef774e162740e621d336dfa860565
+
+
+{
+    "title" : "water authority",
+    "amount" : 180,
+    "category" : "BILLS",
+    "payment_method" : "upi"
+}
+
+#api call for fetching details
+###
+GET http://127.0.0.1:8000/v1/spending/expenses/11/
+Accept: application/json
+Authorization: Token a27a253ea32ef774e162740e621d336dfa860565
+
+
+#api call for update
+###
+PUT http://127.0.0.1:8000/v1/spending/expenses/8/
+Content-Type: application/json
+Authorization: Token a27a253ea32ef774e162740e621d336dfa860565
+
+
+ {
+    "id": 8,
+    "title": "hospital",
+    "amount": "45000.00",
+    "category": "HEALTH",
+    "priority": "need",
+    "payment_method": "upi",
+    "created_at": "2026-10-10T15:04:02.355605Z",
+    "updated_at": "2026-10-10T15:04:02.355635Z",
+    "owner": 1
+  }
+
+#api call for delete expense
+###
+DELETE http://127.0.0.1:8000/v1/spending/expenses/5/
+Accept: application/json
+Authorization: Token a27a253ea32ef774e162740e621d336dfa860565
+
+#api call for expense summary
+###
+GET  http://127.0.0.1:8000/v1/spending/expenses/summary/
+Accept: application/json
+Authorization: Token a27a253ea32ef774e162740e621d336dfa860565
+
+#api call for budget plan
+###
+GET http://127.0.0.1:8000/v1/spending/expenses/budget/
+Accept: application/json
+Authorization: Token a27a253ea32ef774e162740e621d336dfa860565
